@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/login.jsx";
 import Register from "./pages/register.jsx";
 import "./App.css";
+import NewPost from "./pages/NewPost.jsx";
 
 function Home() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/post" element={<NewPost />} />
       </Routes>
 
       <Footer />
