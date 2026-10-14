@@ -1,16 +1,97 @@
-# React + Vite
+# SIT313 C1 – DEV@Deakin New Post Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project extends the DEV@Deakin web application by implementing a New Post page using React. The page allows users to choose between creating a Question or an Article and enter the relevant information through a form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Post Type Selection:** Choose between Question and Article.
+- **Question Form:** Enter a title, describe a problem and add tags.
+- **Article Form:** Enter a title, abstract, article text and tags.
+- **Conditional Rendering:** Display different form fields based on the selected post type.
+- **State Management:** Use React's `useState` hook to manage form inputs.
+- **Form Validation:** Check required fields and limit tags to a maximum of three.
+- **Submission Feedback:** Display alert messages for validation errors and successful submissions.
+- **Navigation:** Access the New Post page through the Post button in the navigation bar.
+- **Responsive Design:** Use CSS to provide a clean layout across different screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- HTML
+- CSS
+- React Router
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   ├── FeaturedArticles.jsx
+│   └── FeaturedTutorials.jsx
+├── pages/
+│   ├── login.jsx
+│   ├── register.jsx
+│   ├── NewPost.jsx
+│   └── NewPost.css
+├── App.jsx
+├── App.css
+├── main.jsx
+└── firebase.js
+```
+
+*Note: The structure above represents the expected files. Adjust it if your actual project folders differ.*
+
+## Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Shivamsingla-dev/SIT313-C1.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd SIT313-C1
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in the terminal, usually `http://localhost:5173`.
+
+## How to Use
+
+1. Open the DEV@Deakin application.
+2. Click the **Post** button in the navigation bar.
+3. Select either Question or Article.
+4. Enter the required information in the displayed fields.
+5. Add up to three tags, separated by commas.
+6. Click **Post** to submit the form and view the corresponding alert message.
+
+## Testing
+
+The page can be tested by switching between Question and Article, checking that the correct fields appear, submitting incomplete forms, entering more than three tags and submitting completed forms.
+
+## Current Limitations
+
+The current implementation provides client-side form validation and submission feedback. Posts are not saved to a database or published for other users to view. Backend integration and persistent post storage are not included in this implementation.
+
+## Learning Outcomes
+
+This task helped develop my understanding of React hooks, conditional rendering, controlled form inputs, form validation, component organisation and routing within an existing React application.
