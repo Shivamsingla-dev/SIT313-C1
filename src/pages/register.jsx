@@ -7,7 +7,7 @@ import {
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
-import "./Auth.css";
+import "./auth.css";
 
 function Register() {
     const [firstName, setFirstName] = useState("");
